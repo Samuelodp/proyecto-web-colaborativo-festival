@@ -1,0 +1,89 @@
+/* ====== COLORS & ROOT VARIABLES ====== */
+:root {
+  --sunny: #FF9E5F; 
+  --sky: #6FD3FF;   
+  --sea: #3EC6A8;   
+  --sand: #FFF1C9;  
+  --text-dark: #1f2937;
+  --card-bg: rgba(255,255,255,0.95);
+  --glass: rgba(255,255,255,0.7);
+}
+
+/* ====== GLOBAL ====== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(180deg, var(--sky) 0%, #B0E0FF 40%, var(--sand) 100%);
+  color: var(--text-dark);
+}
+a { text-decoration: none; }
+
+/* ====== NAVBAR ====== */
+.navbar-custom {
+  background: linear-gradient(90deg, var(--sunny), #FFD36E);
+}
+.nav-link.active {
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.brand {
+  color: #fff;
+  font-size: 1.6rem;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ====== HERO ====== */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background-image: radial-gradient(circle at 10% 10%, rgba(255,255,255,0.15), transparent 20%), url(https://www.totalisimo.com/wp-content/uploads/2024/05/Bad-Bunny-giras-mas-lucrativas-2024-Most-Wanted-Tour.jpg);
+  background-size: cover;
+  background-position: center 25%;
+  position: relative;
+  padding: 4rem 1rem;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(255,255,255,0));
+}
+.hero .container { position: relative; z-index: 2; }
+.hero h1, .hero p, .hero .badge { color: #fff; text-shadow: 1px 2px 4px rgba(0,0,0,0.3); }
+.hero .badge-pill { background: rgba(255,255,255,0.2); color: #fff; }
+
+/* ====== SECTIONS ====== */
+section { padding: 4rem 0; }
+.section-title { font-weight: 700; margin-bottom: 1rem; color: var(--sunny); }
+.bg-light { background: var(--glass); border-radius: 14px; padding: 2rem; }
+
+/* ====== CARDS ====== */
+.card, .ticket-card { 
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover, .ticket-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+.card-img-top { border-radius: 14px 14px 0 0; }
+.ticket-card h4 { font-weight: 700; margin-bottom: 0.5rem; color: var(--sea); }
+.ticket-card h3 { color: var(--sunny); margin-bottom: 1rem; }
+
+/* ====== FORMS ====== */
+form .form-control, form .form-select, form textarea {
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid #ddd;
+}
+form .btn { border-radius: 12px; font-weight: 600; background: var(--sunny); border: none; color: #fff; }
+form .btn:hover { background: #FF7A3F; }
+
+/* ====== FOOTER ====== */
+footer { padding: 2rem 0; background: linear-gradient(90deg, rgba(255,255,255,0.05), rgba(255,255,255,0)); border-top:1px solid rgba(0,0,0,0.04); }
+footer p, footer small { color: var(--text-dark); }
+
+/* ====== RESPONSIVE ====== */
+@media (max-width:768px) {
+  .hero h1 { font-size: 2.2rem; }
+}
