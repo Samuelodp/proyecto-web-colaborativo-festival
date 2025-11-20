@@ -54,12 +54,9 @@ img {
     border-radius: 8px;
 }
 
-/* Cartelera - imagen más pequeña */
 .cartel-img {
-    max-width: 60%;
-    margin: 1rem auto;
-    display: block;
-    border-radius: 8px;
+   width: 700px;
+    height: 800px;
 }
 
 section.container {
@@ -93,20 +90,18 @@ form button:hover {
     background-color: #c75c00;
 }
 
-/* Galería - eliminar bordes blancos */
-.gallery-cards img {
-    border-radius: 0;
-    transition: transform 0.3s;
+.galeria {
+width: 100%;
+height: auto;
+border: none; 
+border-radius: 0; 
+display: block;
+margin: 0 auto;
+transition: transform 0.3s;
 }
 
-.gallery-cards img:hover {
-    transform: scale(1.05);
+
+.galeria:hover {
+transform: scale(1.05);
 }
 
-footer {
-    background-color: #ed7e0f;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
